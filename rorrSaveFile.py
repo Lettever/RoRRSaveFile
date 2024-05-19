@@ -4,15 +4,13 @@ import re
 class SaveFile:
     def __init__(self, steamId3):
         ls = set()
-        self.commands = {}#eval(''.join(open('a.txt').readlines()))
+        self.commands = {}
         with open('a.txt', 'r') as f:
             for x in f.readlines():
                 x = x.strip()
                 if x == 'END':
                     break
-                print(x)
                 self.commands[x] = eval(f'self.{x}')
-        print(x)
         file_path = r'C:\Program Files (x86)\Steam\userdata\\' + str(steamId3) + r'\1337520\remote\save.json'
         info = {}
         with open(file_path) as f:
@@ -101,9 +99,9 @@ class SaveFile:
 #h k -> huntress kills
 #co -> commando, 
 def best_fit(command, list_of_commands):
-    valid_keys = list_of_commands.keys()
-    if command in valid_keys:
+    if command in list_of_commands:
         return command, list_of_commands[command]
+    valid_keys = list_of_commands.keys()
     c = ''
     for ch in command:
         c += ch
@@ -135,7 +133,10 @@ def main():
     print(test("abc_def_ghi"))
     while (line := input(">> ")):
         _, fn = best_fit(line, data.commands)
-        if fn is None:
+        if line == '?':
+            for x in data.commands:
+                print('  ', x)
+        elif fn is None:
             print("What")
         else:
             fn()
