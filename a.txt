@@ -1,0 +1,124 @@
+{
+	'acrid': self.acrid,
+	'artificer': self.artificer,
+	'bandit': self.bandit,
+	'chef': self.chef,
+	'commando': self.commando,
+	'drifter': self.drifter,
+	'enforcer': self.enforcer,
+	'engineer': self.engineer,
+	'hand': self.hand,
+	'huntress': self.huntress,
+	'loader': self.loader,
+	'mercenary': self.mercenary,
+	'miner': self.miner,
+	'pilot': self.pilot,
+	'robomando': self.robomando,
+	'sniper': self.sniper,
+}
+#	'wins': {
+#		'': 'wins',
+#		'monsoon': 'wins_hard'
+#	}
+#	'deaths': 'deaths',
+#	'games': 'games_played',
+#	'items': 'total_items',
+#	'kills': 'total_kills',
+#	'stages': 'total_stages',
+#survivor_enforcer_deaths
+#survivor_huntress_total_stages
+#survivor_chef_wins
+#survivor_engineer_games_played
+#survivor_drifter_wins
+#survivor_robomando_total_kills
+#survivor_chef_games_played
+#survivor_hand_total_kills
+#survivor_bandit_wins
+#survivor_sniper_total_stages
+#survivor_pilot_wins
+#survivor_miner_games_played
+#survivor_robomando_total_items
+#survivor_loader_deaths
+survivor_drifter_total_kills
+survivor_bandit_total_items
+survivor_miner_wins
+survivor_huntress_wins
+survivor_enforcer_total_kills
+survivor_enforcer_total_stages
+survivor_loader_wins
+survivor_huntress_games_played
+survivor_acrid_total_items
+survivor_robomando_wins
+survivor_hand_total_items
+survivor_huntress_deaths
+survivor_mercenary_games_played
+survivor_engineer_total_kills
+survivor_robomando_total_stages
+survivor_drifter_games_played
+survivor_engineer_total_stages
+survivor_sniper_total_items
+survivor_sniper_wins
+survivor_drifter_deaths
+survivor_mercenary_wins_hard
+survivor_loader_total_kills
+survivor_engineer_deaths
+survivor_acrid_games_played
+survivor_chef_total_items
+survivor_pilot_total_kills
+survivor_huntress_total_items
+survivor_enforcer_wins
+survivor_acrid_wins
+survivor_commando_total_items
+survivor_arti_total_kills
+survivor_huntress_total_kills
+survivor_bandit_total_kills
+survivor_drifter_total_stages
+survivor_mercenary_wins
+survivor_chef_total_kills
+survivor_robomando_games_played
+survivor_bandit_total_stages
+survivor_enforcer_games_played
+survivor_sniper_games_played
+survivor_mercenary_total_kills
+survivor_hand_deaths
+survivor_arti_total_items
+survivor_enforcer_total_items
+survivor_arti_wins
+survivor_miner_deaths
+survivor_chef_deaths
+survivor_hand_wins
+survivor_hand_games_played
+survivor_commando_total_stages
+survivor_loader_total_stages
+survivor_pilot_deaths
+survivor_miner_total_kills
+survivor_mercenary_total_items
+survivor_pilot_games_played
+survivor_acrid_total_stages
+survivor_drifter_total_items
+survivor_commando_deaths
+survivor_bandit_games_played
+survivor_miner_total_stages
+survivor_hand_total_stages
+survivor_arti_games_played
+survivor_acrid_deaths
+survivor_commando_total_kills
+survivor_acrid_total_kills
+survivor_sniper_total_kills
+survivor_miner_total_items
+survivor_engineer_total_items
+survivor_loader_total_items
+survivor_mercenary_total_stages
+survivor_sniper_deaths
+survivor_pilot_total_items
+survivor_engineer_wins
+survivor_loader_games_played
+survivor_commando_wins_hard
+survivor_commando_games_played
+survivor_mercenary_deaths
+survivor_commando_wins
+survivor_bandit_deaths
+survivor_arti_total_stages
+survivor_pilot_total_stages
+survivor_arti_deaths
+survivor_chef_total_stages
