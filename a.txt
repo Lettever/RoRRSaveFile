@@ -1,3 +1,4 @@
+#survivors
 acrid
 artificer
 bandit
@@ -14,144 +15,27 @@ miner
 pilot
 robomando
 sniper
-END
-#{
-#	'acrid': self.acrid,
-#	'artificer': self.artificer,
-#	'bandit': self.bandit,
-#	'chef': self.chef,
-#	'commando': self.commando,
-#	'drifter': self.drifter,
-#	'enforcer': self.enforcer,
-#	'engineer': self.engineer,
-#	'hand': self.hand,
-#	'huntress': self.huntress,
-#	'loader': self.loader,
-#	'mercenary': self.mercenary,
-#	'miner': self.miner,
-#	'pilot': self.pilot,
-#	'robomando': self.robomando,
-#	'sniper': self.sniper,
-#}
-#	'wins': {
-#		'': 'wins',
-#		'monsoon': 'wins_hard'
-#	}
-#	'deaths': 'deaths',
-#	'games': 'games_played',
-#	'items': 'total_items',
-#	'kills': 'total_kills',
-#	'stages': 'total_stages',
-#acrid
-#acrid_deaths
-#acrid_games_played
-#acrid_total_items
-#acrid_total_kills
-#acrid_total_stages
-#acrid_wins
-#arti
-#arti_deaths
-#arti_games_played
-#arti_total_items
-#arti_total_kills
-#arti_total_stages
-#arti_wins
-#bandit
-#bandit_deaths
-#bandit_games_played
-#bandit_total_items
-#bandit_total_kills
-#bandit_total_stages
-#bandit_wins
-#chef
-#chef_deaths
-#chef_games_played
-#chef_total_items
-#chef_total_kills
-#chef_total_stages
-#chef_wins
-#commando
-#commando_deaths
-#commando_games_played
-#commando_total_items
-#commando_total_kills
-#commando_total_stages
-#commando_wins
-#commando_wins_hard
-#drifter
-#drifter_deaths
-#drifter_games_played
-#drifter_total_items
-#drifter_total_kills
-#drifter_total_stages
-#drifter_wins
-#enforcer
-#enforcer_deaths
-#enforcer_games_played
-#enforcer_total_items
-#enforcer_total_kills
-#enforcer_total_stages
-#enforcer_wins
-#engineer
-#engineer_deaths
-#engineer_games_played
-#engineer_total_items
-#engineer_total_kills
-#engineer_total_stages
-#engineer_wins
-#hand
-#hand_deaths
-#hand_games_played
-#hand_total_items
-#hand_total_kills
-#hand_total_stages
-#hand_wins
-#huntress
-#huntress_deaths
-#huntress_games_played
-#huntress_total_items
-#huntress_total_kills
-#huntress_total_stages
-#huntress_wins
-#loader
-#loader_deaths
-#loader_games_played
-#loader_total_items
-#loader_total_kills
-#loader_total_stages
-#loader_wins
-#mercenary
-#mercenary_deaths
-#mercenary_games_played
-#mercenary_total_items
-#mercenary_total_kills
-#mercenary_total_stages
-#mercenary_wins
-#mercenary_wins_hard
-#miner
-#miner_deaths
-#miner_games_played
-#miner_total_items
-#miner_total_kills
-#miner_total_stages
-#miner_wins
-#pilot
-#pilot_deaths
-#pilot_games_played
-#pilot_total_items
-#pilot_total_kills
-#pilot_total_stages
-#pilot_wins
-#robomando
-#robomando_games_played
-#robomando_total_items
-#robomando_total_kills
-#robomando_total_stages
-#robomando_wins
-#sniper
-#sniper_deaths
-#sniper_games_played
-#sniper_total_items
-#sniper_total_kills
-#sniper_total_stages
-#sniper_wins
+test
+#survivors stats
+#	wins
+#	monsoon wins
+#	deaths
+#	games
+#	items
+#	kills
+#	stages
+#
+#	pick rate
+#	wins ratio
+#	monsoon wins ratio
+#	loss ratio
+#	abandonment ratio
+#
+#	functions for the survivors
+#	wins
+#	monsoon
+#	deaths
+#	games
+#	items
+#	kills
+#	stages
