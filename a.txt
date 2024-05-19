@@ -1,21 +1,38 @@
-{
-	'acrid': self.acrid,
-	'artificer': self.artificer,
-	'bandit': self.bandit,
-	'chef': self.chef,
-	'commando': self.commando,
-	'drifter': self.drifter,
-	'enforcer': self.enforcer,
-	'engineer': self.engineer,
-	'hand': self.hand,
-	'huntress': self.huntress,
-	'loader': self.loader,
-	'mercenary': self.mercenary,
-	'miner': self.miner,
-	'pilot': self.pilot,
-	'robomando': self.robomando,
-	'sniper': self.sniper,
-}
+acrid
+artificer
+bandit
+chef
+commando
+drifter
+enforcer
+engineer
+hand
+huntress
+loader
+mercenary
+miner
+pilot
+robomando
+sniper
+END
+#{
+#	'acrid': self.acrid,
+#	'artificer': self.artificer,
+#	'bandit': self.bandit,
+#	'chef': self.chef,
+#	'commando': self.commando,
+#	'drifter': self.drifter,
+#	'enforcer': self.enforcer,
+#	'engineer': self.engineer,
+#	'hand': self.hand,
+#	'huntress': self.huntress,
+#	'loader': self.loader,
+#	'mercenary': self.mercenary,
+#	'miner': self.miner,
+#	'pilot': self.pilot,
+#	'robomando': self.robomando,
+#	'sniper': self.sniper,
+#}
 #	'wins': {
 #		'': 'wins',
 #		'monsoon': 'wins_hard'
