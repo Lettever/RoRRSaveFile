@@ -3,18 +3,30 @@ import re
 
 class SaveFile:
     def __init__(self, steamId3):
-        self.commands = eval(''.join(open('a.txt').readlines()))
+        ls = set()
+        self.commands = {}#eval(''.join(open('a.txt').readlines()))
+        with open('a.txt', 'r') as f:
+            for x in f.readlines():
+                x = x.strip()
+                if x == 'END':
+                    break
+                print(x)
+                self.commands[x] = eval(f'self.{x}')
+        print(x)
         file_path = r'C:\Program Files (x86)\Steam\userdata\\' + str(steamId3) + r'\1337520\remote\save.json'
         info = {}
         with open(file_path) as f:
             js = json.loads(f.read())
             for k, v in js['stats'].items():
                 if(x := re.findall('^survivor_([a-zA-Z]+)_([a-zA-Z_]+)$', k)):
-                    print(k)
                     name, tag = x[0]
+                    ls.add(f'{name}')
+                    ls.add(f'{name}_{tag}')
                     if name not in info:
                         info[name] = {}
                     info[name][tag] = int(v);
+        for x in sorted(list(ls)):
+            print('#', x, sep='')
         valid_keys = [
             'wins_hard',
             'wins',
@@ -85,6 +97,7 @@ class SaveFile:
 
 #huntress info
 #huntress kills
+#commando
 #h k -> huntress kills
 #co -> commando, 
 def best_fit(command, list_of_commands):
