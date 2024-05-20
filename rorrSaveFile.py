@@ -5,22 +5,22 @@ class SaveFile:
     a = {'artificer': 'arti', 'hande': 'hand'}
     def __init__(self, steamId3):
         self.commands = {
-            'acrid': self.test,
-            'artificer': self.test,
-            'bandit': self.test,
-            'chef': self.test,
-            'commando': self.test,
-            'drifter': self.test,
-            'enforcer': self.test,
-            'engineer': self.test,
-            'hande': self.test,
-            'huntress': self.test,
-            'loader': self.test,
-            'mercenary': self.test,
-            'miner': self.test,
-            'pilot': self.test,
-            'robomando': self.test,
-            'sniper': self.test,
+            'acrid': self.survivor,
+            'artificer': self.survivor,
+            'bandit': self.survivor,
+            'chef': self.survivor,
+            'commando': self.survivor,
+            'drifter': self.survivor,
+            'enforcer': self.survivor,
+            'engineer': self.survivor,
+            'hande': self.survivor,
+            'huntress': self.survivor,
+            'loader': self.survivor,
+            'mercenary': self.survivor,
+            'miner': self.survivor,
+            'pilot': self.survivor,
+            'robomando': self.survivor,
+            'sniper': self.survivor,
         }
         file_path = r'C:\Program Files (x86)\Steam\userdata\\' + str(steamId3) + r'\1337520\remote\save.json'
         info = {}
@@ -53,7 +53,7 @@ class SaveFile:
                     info[x][k] = 0
         self.info = info
 
-    def test(self, name):
+    def survivor(self, name):
         if name in self.a:
             name = self.a[name]
         wins = self.info[name]['wins']
@@ -77,19 +77,19 @@ class SaveFile:
             total_picks += x['games_played']
         pick_ratio = games_played / total_picks
         pick_ratio = round(pick_ratio * 100, 2)
-        print('Wins: ', wins, sep='')
-        print('Deaths: ', deaths, sep='')
-        print('Games Played: ', games_played, sep='')
-        print('Total Items: ', total_items, sep='')
-        print('Total Kills: ', total_kills, sep='')
-        print('Total Stages: ', total_stages, sep='')
-        print('Wins: ', wins, sep='')
-        print('Monsoon Wins: ', wins_hard, sep='')
-        print('Win Ratio: ', win_ratio, '%', sep='')
-        print('Monsoon Win Ratio: ', win_hard_ratio, '%', sep='')
-        print('Loss Ratio: ', loss_ratio, '%', sep='')
-        print('Abandonment Ratio: ', abandonment_ratio, '%', sep='')
-        print('Pick Ratio: ', pick_ratio, '%', sep='')
+        print('   Wins: ', wins, sep='')
+        print('   Deaths: ', deaths, sep='')
+        print('   Games Played: ', games_played, sep='')
+        print('   Total Items: ', total_items, sep='')
+        print('   Total Kills: ', total_kills, sep='')
+        print('   Total Stages: ', total_stages, sep='')
+        print('   Wins: ', wins, sep='')
+        print('   Monsoon Wins: ', wins_hard, sep='')
+        print('   Win Ratio: ', win_ratio, '%', sep='')
+        print('   Monsoon Win Ratio: ', win_hard_ratio, '%', sep='')
+        print('   Loss Ratio: ', loss_ratio, '%', sep='')
+        print('   Abandonment Ratio: ', abandonment_ratio, '%', sep='')
+        print('   Pick Ratio: ', pick_ratio, '%', sep='')
         
 def best_fit(command, list_of_commands):
     if command in list_of_commands:
