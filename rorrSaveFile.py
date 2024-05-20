@@ -2,16 +2,26 @@ import json
 import re
 
 class SaveFile:
+    a = {'artificer': 'arti', 'hande': 'hand'}
     def __init__(self, steamId3):
-        ls = set()
-        l = set()
-        self.commands = {}
-        with open('a.txt', 'r') as f:
-            for x in f.readlines():
-                if x.startswith('#'):
-                    continue
-                x = x.strip()
-                self.commands[x] = eval(f'self.{x}')
+        self.commands = {
+            'acrid': self.test,
+            'artificer': self.test,
+            'bandit': self.test,
+            'chef': self.test,
+            'commando': self.test,
+            'drifter': self.test,
+            'enforcer': self.test,
+            'engineer': self.test,
+            'hande': self.test,
+            'huntress': self.test,
+            'loader': self.test,
+            'mercenary': self.test,
+            'miner': self.test,
+            'pilot': self.test,
+            'robomando': self.test,
+            'sniper': self.test,
+        }
         file_path = r'C:\Program Files (x86)\Steam\userdata\\' + str(steamId3) + r'\1337520\remote\save.json'
         info = {}
         with open(file_path) as f:
@@ -19,50 +29,33 @@ class SaveFile:
             for k, v in js['stats'].items():
                 if(x := re.findall('^survivor_([a-zA-Z]+)_([a-zA-Z_]+)$', k)):
                     name, tag = x[0]
-                    ls.add(f'{name}')
-                    ls.add(f'{name}_{tag}')
-                    l.add(tag)
                     if name not in info:
                         info[name] = {}
                     info[name][tag] = int(v);
-        for x in sorted(list(l)):
-            print('#', x, sep='')
+        survivors = [
+            'acrid', 'arti', 'bandit',
+            'chef', 'commando', 'drifter',
+            'enforcer', 'engineer', 'hand',
+            'huntress', 'loader', 'mercenary',
+            'miner', 'pilot', 'robomando',
+            'sniper',
+        ]
         valid_keys = [
-            'wins_hard',
-            'wins',
-            'deaths',
-            'games_played',
-            'total_items',
-            'total_kills',
+            'wins_hard', 'wins', 'deaths',
+            'games_played', 'total_items', 'total_kills',
             'total_stages',
         ]
-        for i in info:
+        for x in survivors:
+            if x not in info:
+                info[x] = {}
             for k in valid_keys:
-                if k not in info[i]:
-                    info[i][k] = 0
+                if k not in info[x]:
+                    info[x][k] = 0
         self.info = info
 
-    """
-    def print(self):
-        valid_keys = [
-            'wins_hard',
-            'wins',
-            'deaths',
-            'games_played',
-            'total_items',
-            'total_kills',
-            'total_stages',
-        ]
-        info = self.info
-        for i in sorted(info):
-            print(i.capitalize(), ': {', sep='')
-            for key in valid_keys:
-                x = info[i][key]
-                key = ' '.join([word.capitalize() for word in key.split('_')])
-                print('    ', key, ': ', x, sep='')
-            print('}\n')
-    """
     def test(self, name):
+        if name in self.a:
+            name = self.a[name]
         wins = self.info[name]['wins']
         deaths = self.info[name]['deaths']
         games_played = self.info[name]['games_played']
@@ -84,91 +77,20 @@ class SaveFile:
             total_picks += x['games_played']
         pick_ratio = games_played / total_picks
         pick_ratio = round(pick_ratio * 100, 2)
-        print('wins', wins)
-        print('deaths', deaths)
-        print('games_played', games_played)
-        print('total_items', total_items)
-        print('total_kills', total_kills)
-        print('total_stages', total_stages)
-        print('wins', wins)
-        print('wins_hard', wins_hard)
-        print('win_ratio', win_ratio)
-        print('win_hard_ratio', win_hard_ratio)
-        print('loss_ratio', loss_ratio)
-        print('abandonment_ratio', abandonment_ratio)
-        print('pick_ratio', pick_ratio)
-    def enforcer(self):
-        wins = self.info['enforcer']['wins']
-        deaths = self.info['enforcer']['deaths']
-        games_played = self.info['enforcer']['games_played']
-        total_items = self.info['enforcer']['total_items']
-        total_kills = self.info['enforcer']['total_kills']
-        total_stages = self.info['enforcer']['total_stages']
-        wins = self.info['enforcer']['wins']
-        wins_hard = self.info['enforcer']['wins_hard']
-        win_ratio = (wins - wins_hard) / games_played
-        win_ratio = round(win_ratio * 100, 2)
-        win_hard_ratio = wins_hard / games_played
-        win_hard_ratio = round(win_hard_ratio * 100, 2)
-        loss_ratio = deaths / games_played
-        loss_ratio = round(loss_ratio * 100, 2)
-        abandonment_ratio = (games_played - wins - deaths) / games_played
-        abandonment_ratio = round(abandonment_ratio * 100, 2)
-        total_picks = 0
-        for x in self.info.values():
-            total_picks += x['games_played']
-        pick_ratio = games_played / total_picks
-        pick_ratio = round(pick_ratio * 100, 2)
-        print('wins', wins)
-        print('deaths', deaths)
-        print('games_played', games_played)
-        print('total_items', total_items)
-        print('total_kills', total_kills)
-        print('total_stages', total_stages)
-        print('wins', wins)
-        print('wins_hard', wins_hard)
-        print('win_ratio', win_ratio)
-        print('win_hard_ratio', win_hard_ratio)
-        print('loss_ratio', loss_ratio)
-        print('abandonment_ratio', abandonment_ratio)
-        print('pick_ratio', pick_ratio)
-    def huntress(self):
-        print('huntress function')
-    def chef(self):
-        print('chef function')
-    def engineer(self):
-        print('engineer function')
-    def drifter(self):
-        print('drifter function')
-    def robomando(self):
-        print('robomando function')
-    def hand(self):
-        print('hand function')
-    def bandit(self):
-        print('bandit function')
-    def sniper(self):
-        print('sniper function')
-    def pilot(self):
-        print('pilot function')
-    def miner(self):
-        print('miner function')
-    def loader(self):
-        print('loader function')
-    def acrid(self):
-        print('acrid function')
-    def mercenary(self):
-        print('mercenary function')
-    def commando(self):
-        print('commando function')
-    def artificer(self):
-        print('artificer function')
-
-
-#huntress info
-#huntress kills
-#commando
-#h k -> huntress kills
-#co -> commando, 
+        print('Wins: ', wins, sep='')
+        print('Deaths: ', deaths, sep='')
+        print('Games Played: ', games_played, sep='')
+        print('Total Items: ', total_items, sep='')
+        print('Total Kills: ', total_kills, sep='')
+        print('Total Stages: ', total_stages, sep='')
+        print('Wins: ', wins, sep='')
+        print('Monsoon Wins: ', wins_hard, sep='')
+        print('Win Ratio: ', win_ratio, '%', sep='')
+        print('Monsoon Win Ratio: ', win_hard_ratio, '%', sep='')
+        print('Loss Ratio: ', loss_ratio, '%', sep='')
+        print('Abandonment Ratio: ', abandonment_ratio, '%', sep='')
+        print('Pick Ratio: ', pick_ratio, '%', sep='')
+        
 def best_fit(command, list_of_commands):
     if command in list_of_commands:
         return command, list_of_commands[command]
@@ -202,16 +124,15 @@ def main():
     data = SaveFile(1047710596)
     print(test("abc_def_ghi"))
     while (line := input(">> ")):
-        name, fn = best_fit(line, data.commands)
+        name, fn = best_fit(line.lower(), data.commands)
         if line == '?':
             for x in data.commands:
                 print('  ', x)
         elif fn is None:
             print("What")
         else:
-            print(name)
-            fn()
+            fn(name)
+        print()
 
 if __name__ == '__main__':
     main()
-    
